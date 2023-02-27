@@ -36,7 +36,7 @@ public class Hooks {
             scenario.attach(picture, "image/png", "passed" + scenario.getName());
         }
 
-       // Driver.closeDriver();
+        Driver.closeDriver();
     }
 
     @AfterStep //method sayisi
@@ -46,3 +46,9 @@ public class Hooks {
         System.out.println(stepCount + ". STEP");
     }
 }
+// Aldığımız SCREENSHOT'lar çok fazla yer kaplar.
+// Onun için bu resimler GitHub'a Push edilmemelidir.
+// Bunu şu şekilde yaparız;
+// test-output klasörüne sağ tıklayıp en aşağıdaki 'Git' seçeneğine gelinir ve 'Add to .gitignore' seçilir.
+// Karşınıza çıkan diğer sorulara da olumlu cevap verebilirsiniz.
+// Böylece GitHub hesabına push etseniz bile resimler yollanmaz. Bunu istediğiniz diğer klasörlere de yapabilirsiniz.

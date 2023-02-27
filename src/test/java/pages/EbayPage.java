@@ -8,6 +8,7 @@ import utilities.Driver;
 public class EbayPage {
 
     public EbayPage(){
+
         PageFactory.initElements(Driver.getDriver(),this);
     }
 

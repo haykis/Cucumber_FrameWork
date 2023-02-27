@@ -18,7 +18,8 @@ public class EbayWin10 {
     }
     @When("Cookies leri kabul eder")
     public void cookiesLeriKabulEder() {
-        ebayPage.cookies.click();
+        Driver.waitIf(ebayPage.cookies,20);
+       // ebayPage.cookies.click();
         Driver.waitBasic(2);
     }
 
