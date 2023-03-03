@@ -25,4 +25,16 @@ public class TelerikPage {
     @FindBy (xpath = "(//h4[@class='TK-Search-Results-List-Item-H'])[1]")
     public WebElement urunadresi;
 
+    @FindBy (xpath = "//button[@id='onetrust-accept-btn-handler']")
+    public  WebElement getTelerikcookies2;
+
+    @FindBy (xpath = "(//a[@class='TK-Menu-Item-Link'])[5]")
+    public WebElement pricing;
+
+    @FindBy (xpath = "(//a[@class='Btn Btn--prim4 u-db'])[1]")
+    public WebElement pakketkiezen;
+
+    @FindBy (xpath = "//span[@class='TK-Counter TK-Counter--SC TK-Counter--Visible']")
+    public WebElement sepetsayisi;
+
 }
