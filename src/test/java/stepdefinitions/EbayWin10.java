@@ -34,6 +34,7 @@ public class EbayWin10 {
     public void cikanSayfadaWinOnButaninaTiklar() {
         ebayPage.winOn.click();
         Driver.waitBasic(2);
+        System.out.println("******************************");
     }
 
     @Then("En usstteki urunun WinOn ozelliklerinde oldugunu test eder")

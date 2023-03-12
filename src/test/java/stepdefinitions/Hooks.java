@@ -18,7 +18,7 @@ public class Hooks {
     public void setup() {
         // TestNG'deki @BeforeMethod gibi çalışır.
         // Her senaryodan önce çalışır.
-        System.out.println("setUp calisti.");
+        //System.out.println("setUp calisti.");
         //Driver.getDriver();
     }
 
@@ -36,7 +36,7 @@ public class Hooks {
             scenario.attach(picture, "image/png", "passed" + scenario.getName());
         }
 
-        Driver.closeDriver();
+        //Driver.closeDriver();
     }
 
     @AfterStep //method sayisi

@@ -93,7 +93,7 @@ public class Driver {
             e.printStackTrace();
         }
     }
-    public static void waitIf(WebElement element, int timeout){
+    public static void waitIf(WebElement element, int timeout){ //fluent wait
         for(int i=0;i<timeout;i++){
             try{
                 element.click();
