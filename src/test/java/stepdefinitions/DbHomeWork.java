@@ -1,21 +1,18 @@
 package stepdefinitions;
-
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import utilities.DbConnect;
-
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.List;
-
 public class DbHomeWork {
     @Given("DB ile baglanti kurulur")
     public void dbIleBaglantiKurulur() throws SQLException {
         DbConnect.connection = DriverManager.getConnection(DbConnect.dbUrl, DbConnect.dbUserName, DbConnect.dbPassword);
         DbConnect.statement = DbConnect.connection.createStatement(DbConnect.resultSet.TYPE_SCROLL_SENSITIVE, DbConnect.resultSet.CONCUR_UPDATABLE);
+
     }
 
     @When("Tablo ya gidilir")
@@ -37,7 +34,6 @@ public class DbHomeWork {
         DbConnect.resultSet=DbConnect.statement.executeQuery("select max(fiyat) from school1");
         DbConnect.resultSet.next();
         Assert.assertTrue(DbConnect.resultSet.getInt(1)==25);
-
     }
 
     @And("Urun isimlerinden birinin adi degistirirlir")
